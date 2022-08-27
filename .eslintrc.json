@@ -2,6 +2,7 @@
   "extends": ["@byodian"],
   "rules": {
     "@typescript-eslint/type-annotation-spacing": "error",
-    "@typescript-eslint/member-delimiter-style": "error"
+    "@typescript-eslint/member-delimiter-style": "error",
+    "no-console": "off"
   }
 }
