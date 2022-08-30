@@ -1,4 +1,4 @@
-import { combine, firstElement, lonest, map } from '@src/functions/generic-functions'
+import { combine, filter1, filter2, firstElement, lonest, map } from '@src/functions/generic-functions'
 
 describe('Generic Functions', () => {
   test('Get the 1 number from [1, 2, 3]', () => {
@@ -16,5 +16,13 @@ describe('Generic Functions', () => {
   test('Specifying type arguments', () => {
     const arr = combine<number | string>([1, 2, 3], ['hello'])
     expect(arr).toEqual([1, 2, 3, 'hello'])
+  })
+
+  test('User fewer type parameter the good one', () => {
+    expect(filter1([2, 3, 4, 5, 6], n => n % 2 === 0)).toEqual([2, 4, 6])
+  })
+
+  test('User fewer type parameter the bad one', () => {
+    expect(filter2([1, 2, 3, 4, 5, 6, 7, 8], n => n % 2 === 0)).toEqual([2, 4, 6, 8])
   })
 })
