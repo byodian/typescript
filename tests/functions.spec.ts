@@ -25,4 +25,10 @@ describe('Generic Functions', () => {
   test('User fewer type parameter the bad one', () => {
     expect(filter2([1, 2, 3, 4, 5, 6, 7, 8], n => n % 2 === 0)).toEqual([2, 4, 6, 8])
   })
+
+  test('Print [1,2,3,4,5,6] number array', () => {
+    const arr1 = [1, 2, 3]
+    arr1.push(4, 5, 6)
+    expect(arr1).toEqual([1, 2, 3, 4, 5, 6])
+  })
 })
