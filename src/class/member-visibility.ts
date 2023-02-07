@@ -23,6 +23,6 @@ class Derived2 extends Base {
   }
 
   f2(other: Base) {
-    other.x = 5
+    // other.x = 5
   }
 }

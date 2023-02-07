@@ -11,14 +11,14 @@ const person: {
   age: 1,
   hobbies: ['Sports', 'Cooking', 'Climbing'],
   role: Role.AUTHOR,
-  other: [2, 'author']
+  other: [2, 'author'],
 }
 
 const personRole = person.role
 const personName = person.name
 
-let favoriteActivities: string[] = [];
-for(const hobby of person.hobbies) {
+const favoriteActivities: string[] = []
+for (const hobby of person.hobbies) {
   hobby.toUpperCase()
   favoriteActivities.push(hobby)
 }
